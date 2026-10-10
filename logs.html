@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<div class="top"><div><h1>Logs: {{ name }}</h1><p class="muted">Latest container output</p></div><a class="btn secondary" href="{{ url_for('index') }}">← Dashboard</a></div><div class="card"><pre>{{ output }}</pre><a class="btn" href="{{ url_for('logs',bot_id=request.view_args['bot_id']) }}">Refresh</a></div>{% endblock %}
